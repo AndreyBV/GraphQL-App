@@ -1,5 +1,6 @@
 export const colors = {
   white: '#FFFFFF',
+  active: '#1B884C',
   primary: '#185CFF',
   primaryLight: '#467DFF',
   secondary: '#002B4E',
@@ -14,7 +15,7 @@ export const colors = {
 };
 
 export const shadows = {
-  softMain: '0px 12px 30px rgba(24, 92, 255, 0.18)',
+  softMain: `0px 12px 30px rgba(24, 92, 255, 0.18)`,
   hard: '0px 12px 30px rgba(24, 92, 255, 0.18)',
   soft1: '0px 2px 20px 17px rgba(24, 92, 255, 0.04)',
   soft2: '0px 12px 30px 17px rgba(24, 92, 255, 0.04)',

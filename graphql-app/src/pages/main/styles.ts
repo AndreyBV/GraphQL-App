@@ -1,7 +1,2 @@
+import { Container } from './../../components/UI/Container/index';
 import styled from 'styled-components';
-
-export const MainCardList = styled.div`
-  > :not(:first-child) {
-    margin-top: 10px;
-  }
-`;

@@ -11,7 +11,7 @@ export const Header = () => {
       <UI.HeaderContainer>
         <Logo />
         <UI.StyledSearch placeholder="Find your request" />
-        <Button>Войти</Button>
+        <Button>Sign in</Button>
       </UI.HeaderContainer>
     </StyledHeader>
   );

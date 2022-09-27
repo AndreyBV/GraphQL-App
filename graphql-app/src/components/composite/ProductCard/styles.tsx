@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors, shadows } from '../../../core/constants/colors';
+import { Card } from '../../UI/Card';
 import { Container } from '../../UI/Container';
 import { PictureWrapper } from '../../UI/Picture/styles';
 
@@ -11,10 +12,7 @@ export const StyledProductContent = styled.div`
   }
 `;
 
-export const StyledProductCard = styled(Container)`
-  display: flex;
-  align-items: center;
-  flex: 1 2 auto;
+export const StyledProductCard = styled(Card)`
   cursor: pointer;
   height: 180px;
   border-radius: 6px;
@@ -23,14 +21,13 @@ export const StyledProductCard = styled(Container)`
   transition: box-shadow 0.2s ease-in;
 
   > ${PictureWrapper} {
-    position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
+    flex: 1;
   }
 
   > ${StyledProductContent} {
     width: 100%;
+    flex: 2;
   }
 
   :hover {

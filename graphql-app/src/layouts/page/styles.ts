@@ -9,10 +9,4 @@ export const PageLayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
-  /* max-width: 1110px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px; */
 `;
