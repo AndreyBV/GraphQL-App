@@ -1,4 +1,5 @@
 import React from 'react';
+import { ScrollbarContainer } from '../ScrollbarContainer/styles';
 import { StyledTextarea } from './styles';
 
 interface ITextarea {
@@ -6,5 +7,15 @@ interface ITextarea {
 }
 
 export const Textarea: React.FC<ITextarea> = ({ placeholder }) => {
-  return <StyledTextarea placeholder={placeholder} />;
+  return (
+    // <ScrollbarContainer
+    //   options={{
+    //     scrollbars: { autoHide: 'leave' },
+    //     textarea: { dynHeight: true },
+    //     resize: 'vertical',
+    //   }}
+    // >
+    <StyledTextarea placeholder={placeholder} />
+    // </ScrollbarContainer>
+  );
 };

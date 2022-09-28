@@ -1,3 +1,4 @@
+import { v4 } from 'uuid';
 import { ListComponents } from '../../UI/ListComponents';
 import { CommentInput } from '../CommentInput';
 import { CommentItem } from '../CommentItem';
@@ -10,7 +11,7 @@ export const CommentBlock = () => {
       <ListComponents>
         {[1, 2, 3, 4].map((item) => {
           return (
-            <UI.CommentItemCard>
+            <UI.CommentItemCard key={v4()}>
               <CommentItem />
             </UI.CommentItemCard>
           );

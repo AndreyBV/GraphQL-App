@@ -21,7 +21,7 @@ export const Main = () => {
   return (
     <PageLayout>
       <ListComponents direction="vertical">
-        {[1, 2, 3].map((item) => {
+        {[1, 2].map((item) => {
           return (
             <ProductCard
               key={v4()}

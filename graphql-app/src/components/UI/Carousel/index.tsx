@@ -1,6 +1,5 @@
 import React from 'react';
 import { ListComponents } from '../ListComponents';
-import { Picture } from '../Picture';
 import * as UI from './styles';
 
 interface ICarousel {
