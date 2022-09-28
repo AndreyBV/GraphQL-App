@@ -12,7 +12,7 @@ export const ProductInfo: React.FC<IProductInfo> = ({}) => {
       <UI.ProductPictures>
         <Picture />
         <Carousel
-          direction="horizontal"
+          layoutDirection="horizontal"
           data={[1, 2, 3, 4, 5].map((t) => (
             <Picture />
           ))}

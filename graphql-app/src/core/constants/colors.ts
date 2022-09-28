@@ -16,7 +16,7 @@ export const colors = {
 
 export const shadows = {
   softMain: `0px 12px 30px ${colors.primary}40`,
-  hard: `0px 12px 30px ${colors.primary}40`,
+  hard: `5px 5px 5px -1px ${colors.primary}40`,
   soft1: `0px 2px 20px 17px ${colors.primary}26`,
   soft2: `0px 12px 30px 17px ${colors.primary}26`,
   soft3: `0px 4px 12px ${colors.primary}33`,

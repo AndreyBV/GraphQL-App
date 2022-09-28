@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface IStyledListComponents {
-  direction?: 'horizontal' | 'vertical';
+  layoutDirection?: 'horizontal' | 'vertical';
 }
 
 export const ListItemWrapper = styled.div``;
@@ -14,8 +14,8 @@ export const StyledListComponents = styled.div<IStyledListComponents>`
     padding: 5px;
   }
 
-  ${({ direction }) => {
-    switch (direction) {
+  ${({ layoutDirection }) => {
+    switch (layoutDirection) {
       case 'horizontal':
         return css`
           flex-direction: row;

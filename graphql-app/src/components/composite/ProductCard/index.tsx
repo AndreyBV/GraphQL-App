@@ -6,6 +6,7 @@ import * as UI from './styles';
 interface IProductCard {
   title: string;
   description: string;
+  layoutDirection?: 'horizontal' | 'vertical';
   image?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
@@ -13,12 +14,13 @@ interface IProductCard {
 export const ProductCard: React.FC<IProductCard> = ({
   title,
   description,
+  layoutDirection,
   image,
   onClick,
 }) => {
   return (
-    <UI.StyledProductCard onClick={onClick}>
-      <Picture source={image}></Picture>
+    <UI.StyledProductCard onClick={onClick} layoutDirection={layoutDirection}>
+      <UI.ProductPicture source={image}></UI.ProductPicture>
       <UI.StyledProductContent>
         <Typography>{title}</Typography>
         <Typography>{description}</Typography>

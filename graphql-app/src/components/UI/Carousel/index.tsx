@@ -4,13 +4,13 @@ import * as UI from './styles';
 
 interface ICarousel {
   data?: React.ReactNode[];
-  direction?: 'horizontal' | 'vertical';
+  layoutDirection?: 'horizontal' | 'vertical';
 }
 
-export const Carousel: React.FC<ICarousel> = ({ data, direction }) => {
+export const Carousel: React.FC<ICarousel> = ({ data, layoutDirection }) => {
   return (
     <UI.StyledCarousel>
-      <ListComponents direction={direction}>{data}</ListComponents>
+      <ListComponents layoutDirection={layoutDirection}>{data}</ListComponents>
     </UI.StyledCarousel>
   );
 };

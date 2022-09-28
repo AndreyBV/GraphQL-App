@@ -3,6 +3,7 @@ import * as UI from './styles';
 
 interface ICard {
   title?: string;
+  layoutDirection?: 'horizontal' | 'vertical';
   children?: React.ReactNode;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
   className?: string;
@@ -10,6 +11,7 @@ interface ICard {
 
 export const Card: React.FC<ICard> = ({
   title,
+  layoutDirection = 'horizontal',
   children,
   onClick,
   className,
@@ -21,7 +23,9 @@ export const Card: React.FC<ICard> = ({
           <Typography>{title}</Typography>
         </UI.TitleBar>
       )}
-      <UI.CardContent>{children}</UI.CardContent>
+      <UI.CardContent layoutDirection={layoutDirection}>
+        {children}
+      </UI.CardContent>
     </UI.StyledCard>
   );
 };

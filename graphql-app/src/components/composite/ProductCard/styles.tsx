@@ -2,7 +2,15 @@ import styled from 'styled-components';
 import { colors, shadows } from '../../../core/constants/colors';
 import { Card } from '../../UI/Card';
 import { CardContent } from '../../UI/Card/styles';
-import { PictureWrapper } from '../../UI/Picture/styles';
+import { Picture } from '../../UI/Picture';
+
+import { PictureWrapper, StyledPicture } from '../../UI/Picture/styles';
+import { Typography } from '../../UI/Typography';
+import { StyledTypography } from '../../UI/Typography/styles';
+
+export const ProductPicture = styled(Picture)`
+  border-radius: 6px;
+`;
 
 export const StyledProductContent = styled.div`
   > :not(:first-child) {
@@ -12,14 +20,17 @@ export const StyledProductContent = styled.div`
 
 export const StyledProductCard = styled(Card)`
   cursor: pointer;
+  /* height: 100%; */
   height: 180px;
   border-radius: 6px;
   background-color: ${colors.white};
   transition: box-shadow 0.2s ease-in;
 
   > ${CardContent} {
-    > ${PictureWrapper} {
-      flex: 2;
+    /* height: 170px; */
+
+    > ${ProductPicture} {
+      flex: 1;
     }
 
     > ${StyledProductContent} {
@@ -29,9 +40,5 @@ export const StyledProductCard = styled(Card)`
 
   :hover {
     box-shadow: ${shadows.hard};
-  }
-
-  > :not(:first-child) {
-    margin-left: 10px;
   }
 `;

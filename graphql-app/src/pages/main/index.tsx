@@ -20,13 +20,14 @@ export const Main = () => {
 
   return (
     <PageLayout>
-      <ListComponents direction="vertical">
+      <ListComponents layoutDirection="vertical">
         {[1, 2].map((item) => {
           return (
             <ProductCard
               key={v4()}
               image={undefined}
               title="Product name"
+              layoutDirection="horizontal"
               description="Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description "
               onClick={handlerProductCardClick(item.toString())}
             />
@@ -40,6 +41,7 @@ export const Main = () => {
               key={v4()}
               image={undefined}
               title="Product name"
+              layoutDirection="vertical"
               description="Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description Test description "
               onClick={handlerProductCardClick(item.toString())}
             />
