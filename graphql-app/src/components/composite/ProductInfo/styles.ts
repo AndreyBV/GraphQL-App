@@ -19,8 +19,7 @@ export const ProductPictures = styled.div`
 `;
 
 export const StyledProductInfo = styled(Card)`
-  display: flex;
-
+  flex-direction: row;
   ${ProductPictures} {
     flex: 1;
   }

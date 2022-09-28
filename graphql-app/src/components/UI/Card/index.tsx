@@ -11,7 +11,7 @@ interface ICard {
 
 export const Card: React.FC<ICard> = ({
   title,
-  layoutDirection = 'horizontal',
+  layoutDirection,
   children,
   onClick,
   className,

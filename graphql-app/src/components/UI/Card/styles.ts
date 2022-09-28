@@ -8,7 +8,6 @@ interface ICardContent {
 export const CardContent = styled.div<ICardContent>`
   display: flex;
   overflow: hidden;
-  flex-direction: column;
   margin: -5px;
 
   > * {
@@ -23,10 +22,11 @@ export const CardContent = styled.div<ICardContent>`
         `;
 
       case 'vertical':
-      default:
         return css`
           flex-direction: column;
         `;
+      default:
+        break;
     }
   }}
 `;
@@ -42,7 +42,7 @@ export const StyledCard = styled.div`
   background: ${colors.white};
   border-radius: 6px;
   padding: 15px;
-  height: 100%;
+  /* height: 100%; */
 
   > :not(:first-child) {
     margin-top: 10px;

@@ -20,7 +20,6 @@ export const StyledProductContent = styled.div`
 
 export const StyledProductCard = styled(Card)`
   cursor: pointer;
-  /* height: 100%; */
   height: 180px;
   border-radius: 6px;
   background-color: ${colors.white};

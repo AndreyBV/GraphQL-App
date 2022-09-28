@@ -6,10 +6,10 @@ import * as UI from './styles';
 
 export const CommentBlock = () => {
   return (
-    <UI.StyledCommentBlock>
+    <UI.StyledCommentBlock title="Comments">
       <CommentInput withAvatar />
       <ListComponents>
-        {[1, 2, 3, 4].map((item) => {
+        {[1, 2].map((item) => {
           return (
             <UI.CommentItemCard key={v4()}>
               <CommentItem />
