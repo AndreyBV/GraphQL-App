@@ -1,0 +1,7 @@
+query getTestData {
+  allFilms {
+    films {
+      title
+    }
+  }
+}
