@@ -51,6 +51,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.13.1",
     "@types/styled-components": "^5.1.26",
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
