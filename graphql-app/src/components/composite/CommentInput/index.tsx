@@ -4,10 +4,14 @@ import { ListComponents } from '../../UI/ListComponents';
 import { Textarea } from '../../UI/Textarea';
 import * as UI from './styles';
 
-export const CommentInput = () => {
+interface ICommentInput {
+  withAvatar?: boolean;
+}
+
+export const CommentInput: React.FC<ICommentInput> = ({ withAvatar }) => {
   return (
     <UI.StyledCommentInput>
-      <Avatar />
+      {withAvatar && <Avatar />}
       <Textarea placeholder="Your comment... " />
     </UI.StyledCommentInput>
   );

@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import { v4 } from 'uuid';
 import { ProductCard } from '../../components/composite/ProductCard';
+import { Button } from '../../components/UI/Button';
 import { GridComponents } from '../../components/UI/GridComponents';
 import { ListComponents } from '../../components/UI/ListComponents';
 import { ROUTE_PATH } from '../../core/constants/routes';
@@ -19,8 +20,8 @@ export const Main = () => {
 
   return (
     <PageLayout>
-      <ListComponents>
-        {[1, 2, 3, 4].map((item) => {
+      <ListComponents direction="vertical">
+        {[1, 2, 3].map((item) => {
           return (
             <ProductCard
               key={v4()}

@@ -12,8 +12,4 @@ export const StyledGridComponents = styled.div<IStyledGridComponents>`
     css`
       grid-template: repeat(${numberRows}, 1fr) / repeat(${numberColumns}, 1fr);
     `}
-
-  > :not(:first-child) {
-    margin-left: 10px;
-  }
 `;

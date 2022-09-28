@@ -4,8 +4,15 @@ interface IStyledListComponents {
   direction?: 'horizontal' | 'vertical';
 }
 
+export const ListItemWrapper = styled.div``;
+
 export const StyledListComponents = styled.div<IStyledListComponents>`
   display: flex;
+  margin: -5px;
+
+  > ${ListItemWrapper} {
+    padding: 5px;
+  }
 
   ${({ direction }) => {
     switch (direction) {
@@ -13,9 +20,9 @@ export const StyledListComponents = styled.div<IStyledListComponents>`
         return css`
           flex-direction: row;
 
-          > :not(:first-child) {
+          /* > :not(:first-child) {
             margin-left: 10px;
-          }
+          } */
         `;
 
       case 'vertical':
@@ -23,9 +30,9 @@ export const StyledListComponents = styled.div<IStyledListComponents>`
         return css`
           flex-direction: column;
 
-          > :not(:first-child) {
+          /* > :not(:first-child) {
             margin-top: 10px;
-          }
+          } */
         `;
     }
   }}

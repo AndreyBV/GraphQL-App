@@ -1,4 +1,4 @@
-import { colors, shadows } from './../../../core/constants/colors';
+import { colors } from './../../../core/constants/colors';
 import styled from 'styled-components';
 
 export const StyledInput = styled.input`

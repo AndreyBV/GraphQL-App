@@ -4,11 +4,8 @@ import styled from 'styled-components';
 
 export const StyledAvatar = styled.div`
   display: flex;
-  align-self: stretch;
   overflow: hidden;
-
   border: 1.5px solid ${colors.grey};
-
   border-radius: 6px;
 
   ${StyledPicture} {

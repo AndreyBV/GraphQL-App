@@ -1,6 +1,5 @@
-import { Card } from './../../UI/Card/index';
 import styled from 'styled-components';
-import { StyledCarousel } from '../../UI/Carousel/styles';
+import { Card } from '../../UI/Card';
 
 export const ProductMainInfo = styled.div`
   > :not(:first-child) {

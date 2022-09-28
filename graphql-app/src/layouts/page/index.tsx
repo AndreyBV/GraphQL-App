@@ -1,7 +1,9 @@
 import React from 'react';
+import { Scrollbar } from 'react-scrollbars-custom';
 import { Footer } from '../../components/composite/Footer';
 import { Header } from '../../components/composite/Header';
 import { Container } from '../../components/UI/Container';
+
 import * as UI from './styles';
 
 interface IPageLayout {

@@ -1,9 +1,7 @@
 import React from 'react';
-import { Container } from '../../UI/Container';
 import { Typography } from '../../UI/Typography';
-
-import * as UI from './styles';
 import { Picture } from '../../UI/Picture';
+import * as UI from './styles';
 
 interface IProductCard {
   title: string;

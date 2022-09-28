@@ -15,9 +15,9 @@ export const colors = {
 };
 
 export const shadows = {
-  softMain: `0px 12px 30px rgba(24, 92, 255, 0.18)`,
-  hard: '0px 12px 30px rgba(24, 92, 255, 0.18)',
-  soft1: '0px 2px 20px 17px rgba(24, 92, 255, 0.04)',
-  soft2: '0px 12px 30px 17px rgba(24, 92, 255, 0.04)',
-  soft3: '0px 4px 12px rgba(12, 68, 204, 0.1)',
+  softMain: `0px 12px 30px ${colors.primary}40`,
+  hard: `0px 12px 30px ${colors.primary}40`,
+  soft1: `0px 2px 20px 17px ${colors.primary}26`,
+  soft2: `0px 12px 30px 17px ${colors.primary}26`,
+  soft3: `0px 4px 12px ${colors.primary}33`,
 };

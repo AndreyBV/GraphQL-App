@@ -15,7 +15,9 @@ export const ListComponents: React.FC<IListComponents> = ({
 }) => {
   return children?.length ? (
     <UI.StyledListComponents direction={direction}>
-      {children?.map((component) => component)}
+      {children?.map((component) => (
+        <UI.ListItemWrapper>{component}</UI.ListItemWrapper>
+      ))}
     </UI.StyledListComponents>
   ) : emptyMessage ? (
     <Typography>{emptyMessage}</Typography>

@@ -6,8 +6,6 @@ import * as UI from './styles';
 
 interface IProductInfo {}
 
-const tmp = [1, 2, 3, 4, 5];
-
 export const ProductInfo: React.FC<IProductInfo> = ({}) => {
   return (
     <UI.StyledProductInfo>
@@ -15,7 +13,7 @@ export const ProductInfo: React.FC<IProductInfo> = ({}) => {
         <Picture />
         <Carousel
           direction="horizontal"
-          data={tmp.map((t) => (
+          data={[1, 2, 3, 4, 5].map((t) => (
             <Picture />
           ))}
         />
