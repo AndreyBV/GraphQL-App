@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run eslint && react-scripts start",
-    "codegen": "graphql-codegen --require dotenv/config",
+    "codegen": "graphql-codegen --config ./codegen.ts --require dotenv/config ",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx src --color --fix",
     "eslint-errors": "eslint --ext .js,.jsx,.ts,.tsx src --color --quiet",
     "build": "react-scripts build",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
+    "@graphql-typed-document-node/core": "^3.1.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
