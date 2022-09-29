@@ -18,11 +18,11 @@ export const PageLayout: React.FC<IPageLayout> = ({ children }) => {
         scrollbars: { autoHide: 'leave' },
       }}
     >
-      <ModalWindow>
+      {/* <ModalWindow>
         <UI.MainContent>
           <Container>{children}</Container>
         </UI.MainContent>
-      </ModalWindow>
+      </ModalWindow> */}
 
       <UI.PageLayoutWrapper>
         <Header />
