@@ -1,10 +1,13 @@
+// @ts-nocheck
 import type { CodegenConfig } from '@graphql-codegen/cli';
 
-export const config: CodegenConfig = {
+const config: CodegenConfig = {
   overwrite: true,
   //   watch: true,
-  verbose: true,
-  schema: 'https://swapi-graphql.netlify.app/.netlify/functions/index',
+  //   verbose: true,
+  //   debug: true,
+  //   errorsOnly: true,
+  schema: process.env.PUBLIC_GRAPHQL_ENDPOINT,
   documents: 'src/**/*.{gql,graphql}',
   generates: {
     'src/graphql/generated': {

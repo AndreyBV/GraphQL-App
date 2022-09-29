@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run eslint && react-scripts start",
-    "codegen": "graphql-codegen",
+    "codegen": "graphql-codegen --require dotenv/config",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx src --color --fix",
     "eslint-errors": "eslint --ext .js,.jsx,.ts,.tsx src --color --quiet",
     "build": "react-scripts build",
@@ -54,10 +54,12 @@
   "devDependencies": {
     "@graphql-codegen/cli": "^2.13.1",
     "@graphql-codegen/client-preset": "^1.0.2",
+    "@graphql-codegen/graphql-modules-preset": "^2.5.1",
     "@graphql-codegen/introspection": "^2.2.1",
     "@graphql-codegen/typescript": "^2.7.3",
     "@graphql-codegen/typescript-operations": "^2.5.3",
     "@graphql-codegen/typescript-react-apollo": "^3.3.3",
+    "@graphql-codegen/typescript-resolvers": "^2.7.3",
     "@types/styled-components": "^5.1.26",
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
