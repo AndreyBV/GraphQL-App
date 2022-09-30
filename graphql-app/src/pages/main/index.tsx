@@ -1,25 +1,18 @@
-import { useQuery } from '@apollo/client';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { v4 } from 'uuid';
+import { PATH_PAGE } from '../../router/constants/routes';
 import { ProductCard } from '../../components/composite/ProductCard';
-import { Button } from '../../components/UI/Button';
-import { GridComponents } from '../../components/UI/GridComponents';
 import { ListComponents } from '../../components/UI/ListComponents';
-import { ModalWindow } from '../../components/UI/ModalWindow';
-import { ROUTE_PATH } from '../../core/constants/routes';
 import { PageLayout } from '../../layouts/page';
-import { getTestData } from '../../query/test';
-import * as UI from './styles';
 
 export const Main = () => {
-  const { data, loading, error } = useQuery(getTestData);
   const navigate = useNavigate();
 
   const { control } = useForm({ defaultValues: {} });
 
   const handlerProductCardClick = (id: string) => () => {
-    navigate(`${ROUTE_PATH.POST}/${id}`);
+    navigate(`${PATH_PAGE.POST}/${id}`);
   };
 
   return (
