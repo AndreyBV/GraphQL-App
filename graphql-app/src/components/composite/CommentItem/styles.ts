@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { StyledTextarea } from '../../UI/Textarea/styles';
 
 export const CommentAuthorInfo = styled.div`
   > :not(:first-child) {

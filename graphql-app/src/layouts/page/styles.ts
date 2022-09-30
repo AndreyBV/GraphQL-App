@@ -1,4 +1,3 @@
-import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import styled from 'styled-components';
 
 export const MainContent = styled.div`

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { StyledAvatar } from './../../UI/Avatar/styles';
 import { StyledTextarea } from '../../UI/Textarea/styles';
 
 export const StyledCommentInput = styled.div`

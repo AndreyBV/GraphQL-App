@@ -4,10 +4,6 @@ import { Card } from '../../UI/Card';
 import { CardContent } from '../../UI/Card/styles';
 import { Picture } from '../../UI/Picture';
 
-import { PictureWrapper, StyledPicture } from '../../UI/Picture/styles';
-import { Typography } from '../../UI/Typography';
-import { StyledTypography } from '../../UI/Typography/styles';
-
 export const ProductPicture = styled(Picture)`
   border-radius: 6px;
 `;

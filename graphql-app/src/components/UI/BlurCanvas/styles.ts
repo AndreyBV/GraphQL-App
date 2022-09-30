@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '../../../core/constants/colors';
 
 interface IBlurCanvas {
   backgroundColor?: string;

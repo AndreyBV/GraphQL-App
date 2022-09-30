@@ -1,8 +1,6 @@
 import React from 'react';
 import { colors } from '../../../core/constants/colors';
 import { BlurCanvas } from '../BlurCanvas/styles';
-import { Button } from '../Button';
-import { ScrollbarContainer } from '../ScrollbarContainer/styles';
 import * as UI from './styles';
 
 interface IModalWindow {
