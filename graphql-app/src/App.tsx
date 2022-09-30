@@ -1,8 +1,10 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { Router } from './router';
 
+console.error('%c⧭', 'color: #ffa640', process.env.PUBLIC_GRAPHQL_ENDPOINT);
+
 const apolloClient = new ApolloClient({
-  uri: process.env.PUBLIC_GRAPHQL_ENDPOINT,
+  uri: 'https://rickandmortyapi.com/graphql',
   cache: new InMemoryCache(),
 });
 
