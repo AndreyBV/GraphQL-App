@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ROUTE_PATH } from '../core/constants/routes';
+import { PATH_PAGE } from './constants/routes';
 import { Error } from '../pages/Error';
 import { Main } from '../pages/main';
 import { Post } from '../pages/post';
@@ -10,8 +10,8 @@ export const Router = () => {
     <BrowserRouter>
       <Suspense>
         <Routes>
-          <Route path={ROUTE_PATH.MAIN} element={<Main />} />
-          <Route path={`${ROUTE_PATH.POST}/:id`} element={<Post />} />
+          <Route path={PATH_PAGE.MAIN} element={<Main />} />
+          <Route path={`${PATH_PAGE.POST}/:id`} element={<Post />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Suspense>

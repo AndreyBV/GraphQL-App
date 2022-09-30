@@ -23,5 +23,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "./codegen.ts"]
+
+  "include": ["src", "./codegen.ts", "./apollo.config.js", "config"]
 }

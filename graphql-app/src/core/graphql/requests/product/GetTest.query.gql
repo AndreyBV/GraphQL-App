@@ -1,0 +1,15 @@
+query GetTest {
+  characters {
+    results {
+      name
+      image
+      status
+      episode {
+        characters {
+          type
+          created
+        }
+      }
+    }
+  }
+}
