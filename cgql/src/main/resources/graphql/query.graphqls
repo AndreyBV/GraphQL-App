@@ -1,3 +1,4 @@
 type Query {
-    getPost(id: ID): Post
+    allPosts: [Post]!
+    post(id: ID): Post
 }
