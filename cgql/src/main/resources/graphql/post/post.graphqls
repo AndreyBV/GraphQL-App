@@ -5,3 +5,20 @@ type Post {
     image: String
 }
 
+input PostState {
+    title: String
+    description: String
+    image: String
+}
+
+#input CreatePostInput {
+#    title: String
+#    description: String
+#    image: String
+#}
+
+#input UpdatePostInput {
+#    title: String
+#    description: String
+#    image: String
+#}

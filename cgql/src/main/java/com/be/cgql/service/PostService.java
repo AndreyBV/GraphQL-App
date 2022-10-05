@@ -20,12 +20,24 @@ public class PostService {
     private final PostRepository postRepository;
 
     @Transactional
-    public PostDto createPost(PostDto dto) {
-        PostEntity postEntity = PostDtoConverter.convertDtoToEntity(dto);
+    public PostDto createPost(PostDto postDto) {
+        PostEntity postEntity = PostDtoConverter.convertDtoToEntity(postDto);
+
 
         postEntity = postRepository.save(postEntity);
 
         return  PostDtoConverter.convertEntityToDto(postEntity);
+    }
+
+    @Transactional
+    public PostDto updatePost(String uuid, PostDto postDto) {
+        PostEntity updatedPostEntity = getPostEntityById(uuid);
+
+        updatedPostEntity.setTitle(postDto.getTitle());
+        updatedPostEntity.setDescription(postDto.getDescription());
+        updatedPostEntity = postRepository.save(updatedPostEntity);
+
+        return  PostDtoConverter.convertEntityToDto(updatedPostEntity);
     }
 
     @Transactional
@@ -35,7 +47,6 @@ public class PostService {
 
         return PostDtoConverter.convertEntityToDto(deletedPostEntity);
     }
-
 
     @Transactional(readOnly = true)
     public  List<PostDto> getAllPostsDto() {
