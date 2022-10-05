@@ -1,0 +1,10 @@
+type User {
+    id: ID!
+    nickname: String
+    email: String
+}
+
+input UserState {
+    nickname: String
+    email: String
+}

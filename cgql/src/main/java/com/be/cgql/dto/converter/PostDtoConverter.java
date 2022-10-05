@@ -7,12 +7,12 @@ import java.util.UUID;
 
 public class PostDtoConverter {
 
-    public static PostEntity convertDtoToEntity(PostDto dto) {
+    public static PostEntity convertDtoToEntity(PostDto postDto) {
         PostEntity postEntity = new PostEntity();
 
         postEntity.setUuid(UUID.randomUUID().toString());
-        postEntity.setTitle(dto.getTitle());
-        postEntity.setDescription(dto.getDescription());
+        postEntity.setTitle(postDto.getTitle());
+        postEntity.setDescription(postDto.getDescription());
 
         return postEntity;
     }

@@ -4,7 +4,7 @@ package com.be.cgql.service.rest;
 import com.be.cgql.dto.PostDto;
 import com.be.cgql.dto.converter.PostDtoConverter;
 import com.be.cgql.entity.PostEntity;
-import com.be.cgql.exception.PostNotFoundException;
+import com.be.cgql.exception.NotFoundException;
 import com.be.cgql.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -36,7 +36,7 @@ public class PostServiceRest {
     @Transactional(readOnly = true)
     public PostEntity getPostEntityById(String uuid) {
         return  postRepository.findById(uuid)
-                .orElseThrow(() -> new PostNotFoundException("Post with id " + uuid + " not found"));
+                .orElseThrow(() -> new NotFoundException("Post with id " + uuid + " not found"));
     }
 }
 

@@ -10,20 +10,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "post")
+@Table(name = "user_account")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PostEntity {
+public class UserEntity {
 
     @Id
     @Column(name = "id")
     private String uuid;
 
     @Column
-    private String title;
+    private String nickname;
 
     @Column
-    private String description;
+    private String email;
 
 }
