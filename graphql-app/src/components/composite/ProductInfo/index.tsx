@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 } from 'uuid';
 import { Carousel } from '../../UI/Carousel';
 import { Picture } from '../../UI/Picture';
 import { Typography } from '../../UI/Typography';
@@ -6,7 +7,7 @@ import * as UI from './styles';
 
 interface IProductInfo {}
 
-export const ProductInfo: React.FC<IProductInfo> = ({}) => {
+export const ProductInfo: React.FC<IProductInfo> = () => {
   return (
     <UI.StyledProductInfo>
       <UI.ProductPictures>
@@ -14,7 +15,7 @@ export const ProductInfo: React.FC<IProductInfo> = ({}) => {
         <Carousel
           layoutDirection="horizontal"
           data={[1, 2, 3, 4, 5].map((t) => (
-            <Picture />
+            <Picture key={v4()} />
           ))}
         />
       </UI.ProductPictures>

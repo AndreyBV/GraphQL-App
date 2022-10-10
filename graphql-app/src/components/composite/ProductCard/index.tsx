@@ -1,6 +1,5 @@
 import React from 'react';
 import { Typography } from '../../UI/Typography';
-import { Picture } from '../../UI/Picture';
 import * as UI from './styles';
 
 interface IProductCard {

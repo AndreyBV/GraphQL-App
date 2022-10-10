@@ -1,5 +1,4 @@
 import React from 'react';
-import { ScrollbarContainer } from '../ScrollbarContainer/styles';
 import { StyledTextarea } from './styles';
 
 interface ITextarea {

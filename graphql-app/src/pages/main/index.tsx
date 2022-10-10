@@ -1,4 +1,3 @@
-import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { v4 } from 'uuid';
 import { PATH_PAGE } from '../../router/constants/routes';
@@ -8,8 +7,6 @@ import { PageLayout } from '../../layouts/page';
 
 export const Main = () => {
   const navigate = useNavigate();
-
-  const { control } = useForm({ defaultValues: {} });
 
   const handlerProductCardClick = (id: string) => () => {
     navigate(`${PATH_PAGE.POST}/${id}`);

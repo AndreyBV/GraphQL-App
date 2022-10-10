@@ -1,5 +1,3 @@
-import { StyledAvatar } from './../../UI/Avatar/styles';
-import { StyledCommentInput } from './../CommentInput/styles';
 import { CardContent } from './../../UI/Card/styles';
 import { colors } from './../../../core/constants/colors';
 import { Card } from '../../UI/Card';
