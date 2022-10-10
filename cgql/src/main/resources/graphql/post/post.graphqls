@@ -3,6 +3,7 @@ type Post {
     title: String
     description: String
     image: String
+    author: User!
 }
 
 input PostState {
