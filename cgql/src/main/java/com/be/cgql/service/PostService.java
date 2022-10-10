@@ -4,7 +4,7 @@ package com.be.cgql.service;
 import com.be.cgql.dto.PostDto;
 import com.be.cgql.dto.converter.PostDtoConverter;
 import com.be.cgql.entity.PostEntity;
-import com.be.cgql.exception.PostNotFoundException;
+import com.be.cgql.exception.NotFoundException;
 import com.be.cgql.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,8 +20,8 @@ public class PostService {
     private final PostRepository postRepository;
 
     @Transactional
-    public PostDto createPost(PostDto dto) {
-        PostEntity postEntity = PostDtoConverter.convertDtoToEntity(dto);
+    public PostDto createPost(PostDto postDto) {
+        PostEntity postEntity = PostDtoConverter.convertDtoToEntity(postDto);
 
         postEntity = postRepository.save(postEntity);
 
@@ -29,13 +29,23 @@ public class PostService {
     }
 
     @Transactional
-    public PostDto deletePost(String uuid) {
-        PostEntity deletedPostEntity = getPostEntityById(uuid);
-        postRepository.deleteById(uuid);
+    public PostDto updatePost(String uuid, PostDto postDto) {
+        PostEntity postEntity = getPostEntityById(uuid);
 
-        return PostDtoConverter.convertEntityToDto(deletedPostEntity);
+        postEntity.setTitle(postDto.getTitle());
+        postEntity.setDescription(postDto.getDescription());
+        postEntity = postRepository.save(postEntity);
+
+        return  PostDtoConverter.convertEntityToDto(postEntity);
     }
 
+    @Transactional
+    public PostDto deletePost(String uuid) {
+        PostEntity postEntity = getPostEntityById(uuid);
+        postRepository.deleteById(uuid);
+
+        return PostDtoConverter.convertEntityToDto(postEntity);
+    }
 
     @Transactional(readOnly = true)
     public  List<PostDto> getAllPostsDto() {
@@ -56,15 +66,13 @@ public class PostService {
     public PostDto getPostDtoById(String uuid) {
         PostEntity postEntity = getPostEntityById(uuid);
 
-        System.out.println(postEntity);
-
         return PostDtoConverter.convertEntityToDto(postEntity);
     }
 
     @Transactional(readOnly = true)
     public PostEntity getPostEntityById(String uuid) {
         return  postRepository.findById(uuid)
-                .orElseThrow(() -> new PostNotFoundException("Post with id " + uuid + " not found"));
+                .orElseThrow(() -> new NotFoundException("Post with id " + uuid + " not found"));
     }
 }
 

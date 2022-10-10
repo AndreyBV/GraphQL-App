@@ -1,11 +1,10 @@
 
-input CreatePostInput {
-    title: String,
-    description: String
-}
-
 type Mutation {
-    createPost(title: String, description: String): Post
+    createPost(post: PostState): Post
+    updatePost(id: ID!, post: PostState): Post
     deletePost(id: ID): Post
-    updatePost(id: ID): Post
+
+    createUser(user: UserState): User
+    updateUser(id: ID!, user: UserState): User
+    deleteUser(id: ID): User
 }
