@@ -1,0 +1,7 @@
+type Query {
+    allPosts: [Post]!
+    post(id: ID): Post
+
+    allUsers: [User]!
+    user(id: ID): User
+}
