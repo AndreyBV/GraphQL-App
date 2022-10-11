@@ -1,7 +1,0 @@
-query GetAllPosts {
-  allPosts {
-    id
-    title
-    description
-  }
-}
