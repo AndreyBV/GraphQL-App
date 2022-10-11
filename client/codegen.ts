@@ -7,9 +7,9 @@ const config: CodegenConfig = {
   schema: process.env.REACT_APP_GRAPHQL_ENDPOINT,
   documents: './src/**/*.{gql,graphql}',
   overwrite: true,
-  watch: true,
+  //   watch: true,
   verbose: true,
-  //   debug: true,
+  debug: true,
   //   errorsOnly: true,
   generates: {
     [PATH_GRAPHQL.TYPES]: {

@@ -35,7 +35,7 @@
   "rules": {
     "max-len": "off",
     "indent": "off",
-    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
     "no-unused-vars": "off",
     "no-plusplus": [
       "error",

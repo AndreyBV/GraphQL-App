@@ -1,7 +1,0 @@
-query GetTestUser {
-  characters {
-    results {
-      name
-    }
-  }
-}
